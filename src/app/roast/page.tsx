@@ -8,7 +8,7 @@ const Page = () => {
   const [displayedRoast, setDisplayedRoast] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event:any) => {
     setWebsite(event.target.value);
   };
 
@@ -22,7 +22,7 @@ const Page = () => {
     setIsLoading(false);
   };
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       handleRoast();
     }
